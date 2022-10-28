@@ -59,8 +59,15 @@ while res != "Q":
         if torres['C'] == finalArray: #Los discos estan apilados en la torre c (objetivo)
             print("¡¡Conseguido!!")
             break
+    else:
+        print("Eso no esta permitido")
+    res = input("Introduce movimiento")
+    res = res.upper().replace(" ", "")
 
-        
+print("El mínimo de movimientos que se pueden hacer son ", (num**2)-(num-1), )
+print("Ha realizado ", len(movimientos)," movimientos. Son los siguientes:")
+for i in movimientos:
+    print(i)
 
 
 
