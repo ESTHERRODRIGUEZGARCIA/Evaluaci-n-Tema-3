@@ -76,16 +76,18 @@ class Polinomio(object):
                 agregar_termino(paux, i, total)
         return paux
 
-        p1.termino_mayor = p2.termino_mayor
-        p2.termino_mayor = aux
-        aux = p1.sig
 
-        return p1 - p2
 
     def division(p1, p2):
-        aux = p1.termino_mayor
-        p1.termino_mayor = p2.termino_mayor
-        p2.termino_mayor = aux
-        aux = p1.sig
-        return p1 / p2
+        paux = Polinomio()
+        pol1 = p1.termino_mayor
+
+        while pol1 is not None:
+            pol2 = p2.termino_mayor
+            while pol2 is not None:
+                termino = pol1.info.termino - pol2.info.termino
+                valor = pol1.info.valor // pol2.info.valor
+                if obtener_valor(paux, termino) !=0:
+                    valor += obtener_valor(paux,termino)
+        
 print(Polinomio.resta)
