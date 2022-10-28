@@ -69,7 +69,12 @@ class Polinomio(object):
 
     def resta(p1, p2):
         paux = Polinomio()
-        mayor = p1
+        mayor = p1 if (p1.grado > p2.grado) else p2
+        for i in range(0, mayor.grado+1):
+            total = obtener_valor(p1, i) - obtener_valor(p2, i) 
+            if total != 0:
+                agregar_termino(paux, i, total)
+        return paux
 
         p1.termino_mayor = p2.termino_mayor
         p2.termino_mayor = aux
