@@ -54,6 +54,3 @@ class Polinomio(object):
                 aux = aux.sig
         return pol
 
-        
-
-        
