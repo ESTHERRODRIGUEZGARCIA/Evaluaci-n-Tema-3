@@ -2,11 +2,11 @@
 
 def movimiento(tf, td):
     global torres
-    texto = str(torres[tf][-1])+ '=' + tf + '=>' + td 
+    texto = str(torres[tf][-1])+ '=' + tf + '=>' + td
     torres[td].append(torres[tf][-1])
 
     del torres[tf][-1]
-    movimiento.append(texto)
+    movimientos.append(texto)
 
 def validar(tf, td):
     try:
@@ -41,7 +41,6 @@ def out():
 
 print(" Instrucciones: \n Para realizar un movimiento hay que escribir en mayusculas la letra de la torre en la que esta la ficha seguida de la letra de la torre a donde quieres moverla ficha. Ejemplo: AB")
 print("El numero de fichas indica la altura que tendrá la torre. ")
-print(" Si quieres salir del juego pulsa 'q'. \n")
 
 num = int(input("Introduce el numero de discos quieres usar: "))
 movimientos = [] #Lista para los movimientos que se van a realizar
@@ -49,6 +48,7 @@ finalArray = [i for i in range(num,0,-1)]
 torres = {"A":list(finalArray),"B":[],"C":[]}
 out()
 res = input("Introduce el movimiento en mayusculas: ")
+print(" Si quieres salir del juego pulsa 'q'. \n")
 
 if res == "q":
     exit()
@@ -60,8 +60,8 @@ while res != "Q":
             print("¡¡Conseguido!!")
             break
     else:
-        print("Eso no esta permitido")
-    res = input("Introduce movimiento")
+        print("Eso no esta permitido. Inténtelo de nuevo. ")
+    res = input("Introduce movimiento: ")
     res = res.upper().replace(" ", "")
 
 print("El mínimo de movimientos que se pueden hacer son ", (num**2)-(num-1), )
