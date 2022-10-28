@@ -50,5 +50,17 @@ torres = {"A":list(finalArray),"B":[],"C":[]}
 out()
 res = input("Introduce el movimiento en mayusculas: ")
 
+if res == "q":
+    exit()
+while res != "Q":
+    if validar(res[0],res[1]):
+        movimiento(res[0], res[1])
+        out()
+        if torres['C'] == finalArray: #Los discos estan apilados en la torre c (objetivo)
+            print("¡¡Conseguido!!")
+            break
+
+        
+
 
 
