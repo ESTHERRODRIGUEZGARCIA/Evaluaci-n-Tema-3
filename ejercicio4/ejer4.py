@@ -1,5 +1,18 @@
 from wsgiref.validate import validator
+import sympy
 
+#Obtenes los dos polinomios introducidos por el usuario
+P1 = input("Primer Polinomio: ")
+P2 = input("Segundo Polinomio: ")
+print("\n")
+
+#Definimos los simbolos
+sympy.init_printing()
+x,y = sympy.symbols('x,y')
+
+#Luego almacenamos en varibles los dos polinomios procesados por la funcion Poly de sympy
+Poly1 = sympy.Poly(P1)
+Poly2 = sympy.Poly(P2)
 
 class datoPolinomio(object):
     def __init__(self, valor, termino):
@@ -54,3 +67,20 @@ class Polinomio(object):
                 aux = aux.sig
         return pol
 
+    def resta(p1, p2):
+        paux = Polinomio()
+        mayor = p1
+
+        p1.termino_mayor = p2.termino_mayor
+        p2.termino_mayor = aux
+        aux = p1.sig
+
+        return p1 - p2
+
+    def division(p1, p2):
+        aux = p1.termino_mayor
+        p1.termino_mayor = p2.termino_mayor
+        p2.termino_mayor = aux
+        aux = p1.sig
+        return p1 / p2
+print(Polinomio.resta)
