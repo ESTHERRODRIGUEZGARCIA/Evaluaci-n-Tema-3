@@ -37,6 +37,11 @@ def out():
         except:
             c = '|'
         print("   ", a, "   ", b, "   ", c, sep="")
+    print("--------------------------\n    A    B    C")
+
+print(" Instrucciones: \n Para realizar un movimiento hay que escribir en mayusculas la letra de la torre en la que esta la ficha seguida de la letra de la torre a donde quieres moverla ficha. Ejemplo: AB")
+print("El numero de fichas indica la altura que tendrá la torre. ")
+print(" Si quieres salir del juego pulsa 'q'. \n")
 
 
 
