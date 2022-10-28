@@ -1,5 +1,5 @@
 #matrix 3x3
-
+import unittest
 
 print ("Ingrese los valores: \n |a00 a01 a02|\n |a10 a11 a12| \n |a20 a21 a22|")
 # defino los valores del la matriz
@@ -24,3 +24,7 @@ print("|",a00, a01, a02,"|")
 print("|",a10, a11, a12,"|")
 print("|",a20, a21, a22,"|")
 print("es: ",total2)
+
+
+if __name__ == '__main__':
+    unittest.main()
