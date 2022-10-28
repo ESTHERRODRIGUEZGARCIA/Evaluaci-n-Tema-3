@@ -43,5 +43,12 @@ print(" Instrucciones: \n Para realizar un movimiento hay que escribir en mayusc
 print("El numero de fichas indica la altura que tendrá la torre. ")
 print(" Si quieres salir del juego pulsa 'q'. \n")
 
+num = int(input("Introduce el numero de discos quieres usar: "))
+movimientos = [] #Lista para los movimientos que se van a realizar
+finalArray = [i for i in range(num,0,-1)]
+torres = {"A":list(finalArray),"B":[],"C":[]}
+out()
+res = input("Introduce el movimiento en mayusculas: ")
+
 
 
