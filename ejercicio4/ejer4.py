@@ -89,5 +89,12 @@ class Polinomio(object):
                 valor = pol1.info.valor // pol2.info.valor
                 if obtener_valor(paux, termino) !=0:
                     valor += obtener_valor(paux,termino)
+                    modificar_termino(paux, termino, valor)
+                else:
+                    agregar_termino(paux, termino, valor)
+                    pol2 = pol2.sig
+                pol1 = pol1.sig
+            return paux
+        
         
 print(Polinomio.resta)
