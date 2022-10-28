@@ -9,14 +9,17 @@ class Naves(object):
         self.pasajeros = pasajeros
 
     def lista(self):
-        listan=[]
-        listan.append(self.nombre)
-        listan.sort()
+        listan = []
+        for i in listan:
+            listan.append(self.nombre)
+            listan.sort()
         print(listan)
 
         listal = []
-        listal.append(self.largo)
-        listal = sorted(reverse = True)
+        for i in listal:
+            listal.append(self.largo)
         print(listal)
+
+
 
 
