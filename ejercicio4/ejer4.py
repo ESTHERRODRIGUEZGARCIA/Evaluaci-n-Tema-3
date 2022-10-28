@@ -12,4 +12,12 @@ class Polinomio(object):
         aux = Nodo()
         dato = datoPolinomio(self.valor, termino)
         aux.info = dato
+        if termino > polinomio.grado:
+            aux.sig = polinomio.termino_mayor
+            while actual.sig is not None and termino < actual.sig.info.termino:
+                actual = actual.sig
+            aux.sig = actual.sig
+            actual.sig = aux
+
+    
         
