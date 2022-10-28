@@ -22,7 +22,21 @@ def validar(tf, td):
         return False
 
 
-    
+def out():
+    for i  in range(num-1,-1,-1):
+        try:
+            a = torres['A'][i]
+        except:
+            a = '|'
+        try:
+            b = torres['B'][i]
+        except:
+            b = '|'
+        try:
+            c = torres['C'][i]
+        except:
+            c = '|'
+        print("   ", a, "   ", b, "   ", c, sep="")
 
 
 
