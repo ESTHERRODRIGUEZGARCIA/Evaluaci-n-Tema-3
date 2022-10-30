@@ -1,4 +1,6 @@
 from Clases4 import *
+from wsgiref.validate import validator
+
 def agregar_termino(self, valor, termino, polinomio):
         aux = Nodo()
         dato = datoPolinomio(self.valor, termino)

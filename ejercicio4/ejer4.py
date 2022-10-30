@@ -1,11 +1,10 @@
-from wsgiref.validate import validator
 import sympy
 from Clases4 import *
 from ejercicio4.funciones import *
 
 #Obtenes los dos polinomios introducidos por el usuario
-P1 = input("Primer Polinomio: ")
-P2 = input("Segundo Polinomio: ")
+p1 = input("Primer Polinomio: ")
+p2 = input("Segundo Polinomio: ")
 print("\n")
 
 #Definimos los simbolos
@@ -13,8 +12,8 @@ sympy.init_printing()
 x,y = sympy.symbols('x,y')
 
 #Luego almacenamos en varibles los dos polinomios procesados por la funcion Poly de sympy
-Poly1 = sympy.Poly(P1)
-Poly2 = sympy.Poly(P2)
+Poly1 = sympy.Poly(p1)
+Poly2 = sympy.Poly(p2)
 
 
 def resta(p1, p2):
@@ -45,6 +44,8 @@ def division(p1, p2):
                 pol2 = pol2.sig
             pol1 = pol1.sig
         return paux
+
+def eliminar_termino(polinomio, termino):
+    pol1 = polinomio.termino_mayor
+    while pol1 is not None:
         
-        
-print(Polinomio.resta)
