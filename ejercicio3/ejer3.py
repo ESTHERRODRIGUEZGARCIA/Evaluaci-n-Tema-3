@@ -1,6 +1,6 @@
 #naves de Star Wars
 #nombre, largo, tripulación y cantidad de pasajeros,
-from naves import *
+
 class Naves(object):
     def __init__(self, nombre:str, largo:float, tripul:int, pasajeros:int):
         self.nombre = nombre
@@ -14,7 +14,7 @@ class Naves(object):
     def represent(self):
         rep = {'Nombre':self.nombre, 'Largo':self.largo, 'Tripulación':self.trip, 'Pasajeros':self.pasajeros}
         return rep
-    
+
     def set_nombre(self, nombre):
         self.nombre = nombre
     def set_largo(self, largo):
@@ -57,12 +57,20 @@ def naves_completas():
     nave5 = ejer3.Naves('Supremacy', 500, 20, 1000)
     nave6 = ejer3.Naves('Estrella de la Muerte', 5, 20, 100)
 
+def mostrar_naves():
     #ealizar un listado ordenado por nombre de las naves de manera ascendente
     #y largo de las mismas de manera descendente
     lista_naves = [nave1, nave2, nave3, nave4, nave5, nave6]
     print("Se muestra la lista de naves... ")
     for i in range(len(lista_naves)):
         print(lista_naves[i].nombre, lista_naves[i].manejo)
+
+def ordenar_naves():
+    lst_naves = []
+    for i in range(len(lista_naves)):
+        lst_naves.append(lista_naves[i].nombre)
+        lst_naves.sort()
+        print("Las naves ordenadas por nombre: "\n, {lst_naves})
         
 
 
