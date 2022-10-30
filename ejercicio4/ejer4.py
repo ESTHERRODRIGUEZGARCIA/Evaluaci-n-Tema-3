@@ -2,18 +2,7 @@ import sympy
 from Clases4 import *
 from ejercicio4.funciones import *
 
-#Obtenes los dos polinomios introducidos por el usuario
-p1 = input("Primer Polinomio: ")
-p2 = input("Segundo Polinomio: ")
-print("\n")
 
-#Definimos los simbolos
-sympy.init_printing()
-x,y = sympy.symbols('x,y')
-
-#Luego almacenamos en varibles los dos polinomios procesados por la funcion Poly de sympy
-Poly1 = sympy.Poly(p1)
-Poly2 = sympy.Poly(p2)
 
 
 def resta(p1, p2):
