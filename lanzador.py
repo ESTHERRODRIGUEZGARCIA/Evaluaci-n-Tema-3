@@ -3,9 +3,9 @@ from ejercicio4 import *
 import sympy
 from ejercicio4.Clases4 import *
 from ejercicio4.funciones import *
+from ejercicio1 import *
 
-
-def elegir():
+def main4():
     p1 = Polinomio()
     agregar_termino(p1, 2, 8)
     p2 = Polinomio()
@@ -48,3 +48,5 @@ def elegir():
     print(Polinomio.determinar_existe)
 
 
+def elegir():
+    ejercicio1.
