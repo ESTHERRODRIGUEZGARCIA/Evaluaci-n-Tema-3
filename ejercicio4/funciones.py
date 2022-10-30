@@ -1,4 +1,4 @@
-from Clases4 import *
+from ejercicio4.Clases4 import *
 from wsgiref.validate import validator
 
 def agregar_termino(self, valor, termino, polinomio):
