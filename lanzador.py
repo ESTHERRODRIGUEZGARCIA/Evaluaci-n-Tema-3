@@ -1,0 +1,1 @@
+#ejer 4 print(Polinomio.resta)
