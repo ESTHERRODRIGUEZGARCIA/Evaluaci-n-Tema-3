@@ -17,3 +17,8 @@ def main4():
     #Luego almacenamos en varibles los dos polinomios procesados por la funcion Poly de sympy
     Poly1 = sympy.Poly(p1)
     Poly2 = sympy.Poly(p2)
+
+    print(Polinomio.resta)
+    print(Polinomio.division)
+    print(Polinomio.eliminar_termino)
+    print(Polinomio.determinar_existe)
