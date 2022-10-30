@@ -49,5 +49,26 @@ class Game(object):
         print(listal)
 
 
+def naves_completas():
+    nave1 = ejer3.Naves('Halcón Milenario', 178, 10, 50)
+    nave2 = ejer3.Naves('Ala-X', 300, 20, 500)
+    nave3 = ejer3.Naves('Destructor Estelar', 100, 10, 20)
+    nave4 = ejer3.Naves('Lanzadera imperial', 30, 5, 15)
+    nave5 = ejer3.Naves('Supremacy', 500, 20, 1000)
+    nave6 = ejer3.Naves('Estrella de la Muerte', 5, 20, 100)
 
+    #ealizar un listado ordenado por nombre de las naves de manera ascendente
+    #y largo de las mismas de manera descendente
+    lista_naves = [nave1, nave2, nave3, nave4, nave5, nave6]
+    print("Se muestra la lista de naves... ")
+    for i in range(len(lista_naves)):
+        print(lista_naves[i].nombre, lista_naves[i].manejo)
+        
+
+
+    #mostrar toda la información del “Halcón Milenario” y la “Estrella de la Muerte”;
+    print(nave1)
+    print(nave6)
+
+    #• determinar cuáles son las cinco naves con mayor cantidad de pasajeros;
 
