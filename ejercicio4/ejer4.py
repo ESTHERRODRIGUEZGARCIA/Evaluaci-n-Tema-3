@@ -55,3 +55,14 @@ def eliminar_termino(polinomio, termino):
             break
         else:
             pol1 = pol1.sig
+
+def determinar_existe(polinomio, termino):
+    pol1 = polinomio.termino_mayor
+    while pol1 is not None:
+        termino_p1 = pol1.info.termino
+        if termino_p1 == termino:
+            return True
+        elif termino_p1 == None:
+            return False
+        else:
+            pol1 = pol1.sig
