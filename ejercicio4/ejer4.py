@@ -48,4 +48,10 @@ def division(p1, p2):
 def eliminar_termino(polinomio, termino):
     pol1 = polinomio.termino_mayor
     while pol1 is not None:
-        
+        termino_p1 = pol1.info.termino
+        if termino_p1 == termino:
+            pol1.info.valor = 0
+            print("Término eliminado...")
+            break
+        else:
+            pol1 = pol1.sig
