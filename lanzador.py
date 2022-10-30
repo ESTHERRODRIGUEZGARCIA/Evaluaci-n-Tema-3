@@ -5,7 +5,7 @@ from ejercicio4.Clases4 import *
 from ejercicio4.funciones import *
 
 
-def main4():
+def elegir():
     p1 = Polinomio()
     agregar_termino(p1, 2, 8)
     p2 = Polinomio()
@@ -20,7 +20,7 @@ def main4():
     eliminar_termino(p2, 2)
     print(mostrar(p1))
     print(mostrar(p2))
-    
+
 
 
 
