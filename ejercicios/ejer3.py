@@ -20,6 +20,9 @@ lista_nombres()
 
 def lista_largo():
     largo = []
-    for row in reader:
-        largo.append(row['largo'])
+    for i in starwars:
+        largo.append(i['Nombre']+ ' ' + i['Largo'])
     largo.sort()
+    largo.reverse()
+    print("La lista de naves ordenada por longitud es: ", largo)
+lista_largo()
