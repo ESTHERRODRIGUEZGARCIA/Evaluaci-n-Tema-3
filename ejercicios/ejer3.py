@@ -21,7 +21,7 @@ lista_nombres()
 def lista_largo():
     largo = []
     for i in starwars:
-        largo.append(i['Nombre']+ ', ' + i['Largo'])
+        largo.append(int(i['Largo']))
     largo.sort()
     largo.reverse()
     print("\n\nLa lista de naves ordenada por longitud es: ", largo)
@@ -41,22 +41,32 @@ def mayor_pasajeros():
         naves5.append(i['Nombre'] + ' ' + i['Pasajeros'])
         naves5.sort()
         naves5.reverse()
-        print("\n\nLas cinco naves con mayor cantidad de pasajeros son: ", naves5[:5])
+    print("\n\nLas cinco naves con mayor cantidad de pasajeros son: ", naves5[:5])
 mayor_pasajeros()
 
 def mayor_tripul():
     tripulacion = []
     for i in starwars:
-        tripulacion.append(i['Nombre'] +' ' + i['Tripul'])
+        tripulacion.append(int(i['Tripul']))
     tripulacion.sort()
     tripulacion.reverse()
-    print("\n\nLa nave que necesita mayor cantidad de tripulación es: ", tripulacion[0])
+    for i in starwars:
+        if int(i['Tripul']) == tripulacion[0]:
+            print("\n\nLa nave que necesita mayor cantidad de tripulación es: ", i['Nombre'])
+
 mayor_tripul()
 
 def naves_at():
     at = []
     for i in starwars:
-        if i['Nombre'].starswith('AT'):
+        if i['Nombre'][:2] == 'AT':
             at.append(i['Nombre'])
-        print("\n\nLista de naves que empieza por at:", at)
+    print("\n\nLista de naves que empieza por AT:", at)
 naves_at()
+
+def seis_pasajeros():
+    pasajeros = []
+    for i in starwars:
+        if int(i['Pasajeros'])>= 6:
+            pasajeros.append(i['Nombre'])
+            
