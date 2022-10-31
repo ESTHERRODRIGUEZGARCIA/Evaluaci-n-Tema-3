@@ -12,7 +12,7 @@ class Polinomio(object):
         self.termino_mayor = None
         self.grado = -1
 
-def agregar_termino(valor, termino, polinomio):
+def agregar_termino(polinomio, termino, valor):
         aux = Nodo()
         dato = datoPolinomio(valor, termino)
         aux.info = dato

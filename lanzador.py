@@ -23,3 +23,4 @@ def main4():
 
     print(mostrar(p1))
     print(mostrar(p2))
+main4()
