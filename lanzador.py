@@ -3,7 +3,7 @@ from ejercicios.ejer4 import Polinomio, agregar_termino, division, mostrar, elim
 
 def main4():
     p1 = Polinomio()
-    agregar_termino(p1, 2, 1)
+    agregar_termino(p1, 2, 8)
     p2 = Polinomio()
     agregar_termino(p2, 1, 2)
 
@@ -17,11 +17,11 @@ def main4():
     print("Mostrar su división:")
     print(mostrar(division(p1, p2)))
 
-    print("DEterminar si existe el término en cada polinomio: ")
+    print("Determinar si existe el término en cada polinomio: ")
     print(determinar_existe(p1, 2))
     print(determinar_existe(p2, 2))
 
-    print("Eliminar el término: ")
+    
     eliminar_termino(p1, 2)
     eliminar_termino(p2, 2)
 
