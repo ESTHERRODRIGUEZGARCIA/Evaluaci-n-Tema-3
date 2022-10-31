@@ -1,6 +1,4 @@
-
-import re
-from ejercicios import ejer1, ejer2, ejer3
+from ejercicios import ejer1, ejer2, ejer3, main4
 
 
 def ejecutar():
@@ -12,9 +10,10 @@ def ejecutar():
     elif eleccion == 3:
         ejer3()
     elif eleccion == 4:
-        pass
+        main4()
     elif eleccion == 5:
         pass
     elif eleccion == 6:
         print("Finished. ")
 
+ejecutar()

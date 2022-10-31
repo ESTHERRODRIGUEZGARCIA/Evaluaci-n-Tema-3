@@ -1,3 +1,4 @@
+
 class Nodo(object):
     info, sig = None, None
 
@@ -11,9 +12,9 @@ class Polinomio(object):
         self.termino_mayor = None
         self.grado = -1
 
-def agregar_termino(self, valor, termino, polinomio):
+def agregar_termino(valor, termino, polinomio):
         aux = Nodo()
-        dato = datoPolinomio(self.valor, termino)
+        dato = datoPolinomio(valor, termino)
         aux.info = dato
         if termino > polinomio.grado:
             aux.sig = polinomio.termino_mayor
