@@ -99,8 +99,7 @@ def nave_grande():
     grande.reverse()
     for i in starwars:
         if int(i['Largo']) == grande[0]:
-            print("\n\nLa nave más grande es: ", i['Nombre'])
-
-nave_peque()
+            print("La nave más grande es: ", i['Nombre'])
+nave_grande()
 
 
