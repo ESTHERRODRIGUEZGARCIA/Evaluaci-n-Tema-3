@@ -34,3 +34,29 @@ def lista_inf():
         elif i['Nombre'] == "Estrella de la Muerte":
             print("\n\nInformación sobre Estrella de la Muerte: ",i)
 lista_inf()
+
+def mayor_pasajeros():
+    naves5 = []
+    for i in starwars:
+        naves5.append(i['Nombre'] + ' ' + i['Pasajeros'])
+        naves5.sort()
+        naves5.reverse()
+        print("\n\nLas cinco naves con mayor cantidad de pasajeros son: ", naves5[:5])
+mayor_pasajeros()
+
+def mayor_tripul():
+    tripulacion = []
+    for i in starwars:
+        tripulacion.append(i['Nombre'] +' ' + i['Tripul'])
+    tripulacion.sort()
+    tripulacion.reverse()
+    print("\n\nLa nave que necesita mayor cantidad de tripulación es: ", tripulacion[0])
+mayor_tripul()
+
+def naves_at():
+    at = []
+    for i in starwars:
+        if i['Nombre'].starswith('AT'):
+            at.append(i['Nombre'])
+        print("\n\nLista de naves que empieza por at:", at)
+naves_at()
