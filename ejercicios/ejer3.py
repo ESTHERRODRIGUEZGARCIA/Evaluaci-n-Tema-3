@@ -71,3 +71,36 @@ def seis_pasajeros():
             pasajeros.append(i['Nombre'])
     print("\n\nLas naves que pueden llevar seis o más pasajeros son: ", pasajeros)
 seis_pasajeros()
+
+def nave_peque():
+    peque = []
+    for i in starwars:
+        if i['Nombre'] == 'PE':
+            peque.append(i['Nombre'])
+
+
+
+def nave_peque():
+    peque = []
+    for i in starwars:
+        peque.append(int(i['Largo']))
+    peque.sort()
+    for i in starwars:
+        if int(i['Largo']) == peque[0]:
+            print("\n\nLa nave más pequeña es: ", i['Nombre'])
+
+nave_peque()
+
+def nave_grande():
+    grande = []
+    for i in starwars:
+        grande.append(int(i['Largo']))
+    grande.sort()
+    grande.reverse()
+    for i in starwars:
+        if int(i['Largo']) == grande[0]:
+            print("\n\nLa nave más grande es: ", i['Nombre'])
+
+nave_peque()
+
+
