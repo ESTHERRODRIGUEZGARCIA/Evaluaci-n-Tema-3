@@ -69,4 +69,5 @@ def seis_pasajeros():
     for i in starwars:
         if int(i['Pasajeros'])>= 6:
             pasajeros.append(i['Nombre'])
-            
+    print("\n\nLas naves que pueden llevar seis o más pasajeros son: ", pasajeros)
+seis_pasajeros()
