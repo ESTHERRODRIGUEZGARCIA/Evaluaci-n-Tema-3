@@ -24,7 +24,7 @@ def lista_largo():
         largo.append(int(i['Largo']))
     largo.sort()
     largo.reverse()
-    print("\n\nLa lista de naves ordenada por longitud es: ", largo)
+    print("\n\nLa lista ordenada por longitud es: ", largo)
 lista_largo()
 
 def lista_inf():
@@ -52,7 +52,7 @@ def mayor_tripul():
     tripulacion.reverse()
     for i in starwars:
         if int(i['Tripul']) == tripulacion[0]:
-            print("\n\nLa nave que necesita mayor cantidad de tripulación es: ", i['Nombre'])
+            print("\n\nLa nave que necesita mayor cantidad de tripulación es: ", i['Nombre'], "con ", i['Tripul'], " tripulantes.")
 
 mayor_tripul()
 

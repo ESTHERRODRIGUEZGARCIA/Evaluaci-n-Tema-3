@@ -6,7 +6,7 @@ def main4():
     agregar_termino(p1, 2, 1)
     p2 = Polinomio()
     agregar_termino(p2, 1, 2)
-    
+
 
     print(mostrar(p1))
     print(mostrar(p2))
