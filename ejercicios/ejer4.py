@@ -27,16 +27,16 @@ def agregar_termino(valor, termino, polinomio):
             aux.sig = actual.sig
             actual.sig = aux
 
-def modificar_termino(polinomio, termino):
+def modificar_termino(polinomio, termino, valor):
     aux = polinomio.termino_mayor
     while aux is not None and aux.info.termino != termino:
         aux = aux.sig
-    aux.info.valor = validator
+    aux.info.valor = valor
 
 
 def obtener_valor(polinomio, termino):
     aux = polinomio.termino_mayor
-    while aux is not None and aux.info.termino == termino:
+    while aux is not None and aux.info.termino != termino:
         aux = aux.sig
     if aux is not None and aux.infi.termino == termino:
         return aux.info.valor
@@ -46,13 +46,13 @@ def obtener_valor(polinomio, termino):
 def mostrar(polinomio):
     aux = polinomio.termino_mayor
     pol = ''
-    if aux is not None:
-        while aux is not None:
-            signo += ''
-            if aux.info.valor >= 0:
-                signo += '+'
-            pol += signo + str(aux.info.valor) + "x^"+ str(aux.info.termino)
-            aux = aux.sig
+    
+    while aux is not None:
+        signo = ''
+        if aux.info.valor >= 0:
+            signo += '+'
+        pol += signo + str(aux.info.valor) + "x^"+ str(aux.info.termino)
+        aux = aux.sig
     return pol
 
 def resta(p1, p2):
@@ -80,9 +80,9 @@ def division(p1, p2):
                 modificar_termino(paux, termino, valor)
             else:
                 agregar_termino(paux, termino, valor)
-                pol2 = pol2.sig
-            pol1 = pol1.sig
-        return paux
+            pol2 = pol2.sig
+        pol1 = pol1.sig
+    return paux
 
 def eliminar_termino(polinomio, termino):
     pol1 = polinomio.termino_mayor
